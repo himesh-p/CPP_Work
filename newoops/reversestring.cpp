@@ -39,8 +39,7 @@ class String{
             cout << "\nThe string is pelindrom.";
         }   
          
-    }
-      
+    } 
 };
 
 int main(){
