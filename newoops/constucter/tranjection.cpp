@@ -7,18 +7,10 @@ class Tranjection{
     float amount;
     string tranjection_type;
 
-    Tranjection(){
-        tranjection_id = 0;
-        amount = 0.0;
-        tranjection_type = "";
-    }
-    void scan(){
-        cout << "Enter the tranjection_id = " << endl;
-        cin >> tranjection_id;
-        cout << "Enter the amount = " << endl;
-        cin >> amount;
-        cout  << "Enter the tranjection type = " << endl;
-        cin >> tranjection_type;
+    Tranjection(int ti,float a,string tt){
+        tranjection_id = ti;
+        amount = a;
+        tranjection_type = tt;
     }
     void display(){
         cout << "The tranjection_id = " << tranjection_id << endl;
@@ -28,7 +20,15 @@ class Tranjection{
 };
 
 int main(){
-    Tranjection t;
-    t.scan();
+    int ti;
+    float a;
+    string tt;
+     cout << "Enter the tranjection_id = " << endl;
+        cin >> ti;
+        cout << "Enter the amount = " << endl;
+        cin >> a;
+        cout  << "Enter the tranjection type = " << endl;
+        cin >> tt;
+    Tranjection t(ti,a,tt);
     t.display();
 }
