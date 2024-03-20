@@ -7,19 +7,13 @@ class Bank{
     float balance;
     string name;
 
-    Bank(){
-        account_no = 0;
-        balance = 0.0;
-        name = "";
+    Bank(int a,float ba,string n){
+        account_no = a;
+        balance = ba;
+        name = n;
     }
     void scan(){
-        cout << "\nEnter the account number:-  " ;
-        cin >> account_no;
-        cout << "\nEnter the bank balance:-  ";
-        cin >> balance;
-        cout << "\nEnter the holder's name:-  ";
-        cin.ignore();
-        getline(cin,name);
+        
     }
 
     void display(){
@@ -32,7 +26,16 @@ class Bank{
 };
 
 int main(){
-    Bank b;
-    b.scan();
+    int a;
+    float ba;
+    string n;
+    cout << "\nEnter the account number:-  " ;
+        cin >> a;
+        cout << "\nEnter the bank balance:-  ";
+        cin >> ba;
+        cout << "\nEnter the holder's name:-  ";
+        cin.ignore();
+        getline(cin,n);
+    Bank b(a,ba,n);
     b.display();
 }
