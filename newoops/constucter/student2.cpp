@@ -7,20 +7,11 @@ class Student{
     int Roll_No;
     int age;
 
-    Student(){
-        name = "";
-        Roll_No = 0;
-        age = 0;
+    Student(string n,int r,int a){
+        name = n;
+        Roll_No = r;
+        age = a;
     }
-     void scan(){
-        cout << "Enter the student name:- " << endl;
-        // cin.ignore();
-        getline(cin,name);
-        cout << "Enter the roll no:-  " << endl;
-        cin >> Roll_No;
-        cout << "Enter the age:- " << endl;
-        cin >> age;
-     }
      void display(){
         cout << "The name the student :- " << name << endl;
         cout << "The Roll no of the student :- " << Roll_No << endl;
@@ -29,7 +20,16 @@ class Student{
 };
 
 int main(){
-    Student s;
-    s.scan();
+    string n;
+    int r;
+    int a;
+     cout << "Enter the student name:- " << endl;
+        // cin.ignore();
+        getline(cin,n);
+        cout << "Enter the roll no:-  " << endl;
+        cin >> r;
+        cout << "Enter the age:- " << endl;
+        cin >> a;
+    Student s(n,r,a);
     s.display();
 }
