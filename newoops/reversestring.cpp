@@ -7,7 +7,7 @@ class String{
     public:
     void scan(){
         cout << "\nEnter the any string:- ";
-          getline(cin,name);
+        getline(cin,name);
     }
     void display(){
           cout << "\nThe string is:- " << name ;
@@ -34,10 +34,13 @@ class String{
             name1[k] = name1[j];
             name1[j] = temp;  
         }
-            cout << "\nThe reverse string is:- " << name1;
+            cout << "\nThe reverse string is:- " << name1 << endl;
         if(name == name1){
-            cout << "\nThe string is pelindrom.";
+            cout << "The string is pelindrom." << endl;
         }   
+        else{
+            cout << "The string is not pelindrom." << endl; 
+        }
          
     } 
 };

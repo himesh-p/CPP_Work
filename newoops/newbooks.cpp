@@ -24,7 +24,7 @@ class Books{
                 cout << t << " added to the List" << endl;
             }
         else{
-            cout << "Cannot added more books. List is full.";
+            cout << "Cannot added more books. List is full.";  
         }
     }
     

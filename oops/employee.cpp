@@ -12,7 +12,8 @@ class Employees{
         cin >> emp_id;
 
         cout << "\nEnter the name of employees:-  ";
-        cin >> name;
+        cin.ignore();
+        getline(cin,name);
 
         cout << "\nEnter the salary of the employees:-  ";
         cin >> salary;
