@@ -4,18 +4,14 @@ using namespace std;
 class Bank{
     public:
     int account_no;
-    float balance;
     string name;
+    float balance;
 
     Bank(int a,float ba,string n){
         account_no = a;
         balance = ba;
         name = n;
     }
-    void scan(){
-        
-    }
-
     void display(){
         cout << "\n\n";
         cout << "\nAccount number = " << account_no;
