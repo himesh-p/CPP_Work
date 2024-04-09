@@ -11,7 +11,8 @@ class Bank {
         cout << "\nEnter the account number:-  " ;
         cin >> account_no;
         cout << "\nEnter the holder's name:-  ";
-        cin >> name;
+        cin.ignore();       
+        getline(cin,name);
         cout << "\nEnter the bank balance:-  ";
         cin >> balance;
     }
