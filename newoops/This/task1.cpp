@@ -38,4 +38,5 @@ int main(){
     Bank b(12 , "Himesh Patel" , 20000);
     b.display();
     b.dw(a,c);
+    return 0;
 }
