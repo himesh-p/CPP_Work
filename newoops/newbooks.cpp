@@ -31,9 +31,24 @@ class Books{
     void removeBooks(string title){
         for(int i=0;i<countBook;i++){
             if(books[i].title == title){
-                
+               title = "none"; 
             }
         }
     }
-
+    void display(){
+        for (int i = 0; i < countBook ; i++)
+        {
+            if(books[i].title != "none"){
+                cout << "Title:- " << books[i].title << endl;
+                cout << "Author:- " << books[i].author << endl;
+            }
+        }
+    }
 };
+
+int main(){
+    Books b;
+    b.addBooks("book1" , "author1" );
+    b.removeBooks("Book1");
+    b.display();
+}

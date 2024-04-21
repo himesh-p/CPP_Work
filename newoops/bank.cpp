@@ -29,7 +29,7 @@ class Bank {
         cout << "\nEnter the money if you want to withdraw:- ";
         cin >> w;
         if(w>balance){
-            cout << "\nYour balaance is less than your widthdraw amount.";
+            cout << "\nYour balance is less than your widthdraw amount.";
             w=0;
         }
         cout << "\nEnter the money if you want to deposit:- ";
