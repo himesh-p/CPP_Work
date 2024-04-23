@@ -1,24 +1,27 @@
 #include<iostream>
-#define SIZE 3;
 using namespace std;
 
 class SumOfMatrix{
 private:    
-    int m1[SIZE],m2[SIZE];
+    int m1[2][2] = {{1,2} , {3,4}};
+    int m2[2][2] = {{5,6} , {7,8}};
 public:
-    SumOfMatrix(int a , int b){
-        
-    }
-    
-    friend void numbersum(const SumOfNum& obj);
+    friend void numbersum(const SumOfMatrix& obj);
 };
 
-    void numbersum(const SumOfNum& obj){
-         cout << endl << "The sum of the two number:- " <<  obj.m1 + obj.m2 << endl;
+    void numbersum(const SumOfMatrix& obj){
+        cout << "The addition of this matrix:- " << endl;
+        for (int i = 0; i < 2; i++){
+            for(int j =0;j<2;j++){
+               cout << obj.m1[i][j] + obj.m2[i][j] << " ";
+            }
+            cout << endl;
+        }
+        
     } 
 int main(){
     
-    SumOfNum s(2,2);
+    SumOfMatrix s;
     numbersum(s);
     return 0;
 }
