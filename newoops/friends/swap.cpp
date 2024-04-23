@@ -31,11 +31,15 @@ int main(){
     Value1 v1(3);
     Value2 v2(6); 
 
-    first(v1);
-    second(v2);
+    int a=first(v1);
+    int b=second(v2);
+    cout << endl << "Before swaping" << endl;
+    cout << "first:- " << a << " " << "Second :- " << b ;   
     int temp;
-    temp = first(v1);
-    first(v1) = second(v2);
-    second(v2) = temp;
+    temp = a;
+    a = b;
+    b = temp;
+    cout << endl << "After swaping" << endl;
+    cout << "first:- " << a << " " << "Second :- " << b ;
     return 0;
 }
