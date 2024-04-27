@@ -1,3 +1,5 @@
+//1. Vehicle Inheritance Hierarchy: Implement a program that demonstrates single inheritance by creating a base class 'Vehicle' with derived classes 'Car', 'Motorcycle', and 'Truck'. Each derived class should inherit properties and methods from the base class while also adding its own unique characteristics.
+
 #include<iostream>
 using namespace std;
 

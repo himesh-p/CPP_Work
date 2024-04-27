@@ -1,3 +1,5 @@
+//2. Employee Inheritance: Develop a system for managing employees in an organization using inheritance. Create a base class 'Employee' with derived classes 'Manager', 'Engineer', and 'Clerk'. Each derived class should inherit common attributes and methods from the base class while having specialized features specific to their role.
+
 #include<iostream>
 using namespace std;
 
@@ -43,7 +45,7 @@ class Clerk : public Employee {
 private:
     string qulification;
 public:
-    Clerk(string n, int id, string spec) : Employee(n, id), qulification(spec) {}
+    Clerk(string n, int id, string qul) : Employee(n, id), qulification(qul) {}
 
     void display() {
         cout << "Engineer - ";

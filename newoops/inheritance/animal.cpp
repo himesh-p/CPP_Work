@@ -1,3 +1,5 @@
+//4. Animal Inheritance: Build a system to model different animals using inheritance. Design a base class 'Animal' with derived classes like 'Mammal', 'Bird', and 'Reptile'. Each derived class should inherit common traits from the base class while also possessing distinct characteristics inherent to their category.
+
 #include<iostream>
 using namespace std;
 
