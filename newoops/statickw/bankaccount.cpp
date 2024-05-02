@@ -1,14 +1,15 @@
 //3. "Design a 'Bank' class to represent a bank's financials. Use a static member variable 'totalAssets' to keep track of the sum of all customer account balances, and update it automatically every time a new account is created or an existing account balance changes."
 
 #include<iostream>
+#include<iomanip>
 using namespace std;
 
 class Bank{
 private:
     int account_no[100];
     float balance[100];
-    static int count;
-    static int count2;
+    int count;
+    static double totalAsset;
 public:
     void addCostumer(){
         for (int i = 0; i < count; i++)
@@ -28,29 +29,28 @@ public:
             
         }
     void addnewCostumer(){
-            cout << "How many member if you want to add this bank:- " << endl;
-            cin >> count2;
-            for (int i = 0; i < count2; i++)
+            // cout << "How many member if you want to add this bank:- " << endl;
+            // cin >> count2;
+            for (int i = 0; i < count; i++)
             {
             cout << endl  << "The account number is:- " << endl;
             cin >>  account_no[i];
             cout << "The account balance:- " << endl;
-            cin >> balance[i]; 
+            cin >> balance[i];
             }  
     }
     void sumSalary(){
-        float sum = 0;
+        double sum = 0;
         cout << "The sum of all salary is:- " << endl;
-        for (int i = 0; i < (count+count2) ; i++)
+        for (int i = 0; i < count ; i++)
         {
              sum += balance[i];
         }
-        cout << sum;
+        cout << fixed << setprecision(6) << sum;
     }
 };
 
-int Bank::count = 3;
-int Bank::count2 = 2;
+
 int main(){
     Bank obj;
     obj.addCostumer();
@@ -60,6 +60,9 @@ int main(){
     cin >> ans;
     if(ans == "YES"){
         obj.addnewCostumer();
+    }
+    else if(ans == "NO"){
+        cout << "Ok Fine. Thank you!" << endl;
     }
     obj.sumSalary();
     return 0;
