@@ -1,3 +1,5 @@
+// 4. Employee Management System: Implement a class named 'Employee' with overloaded methods to handle different types of employee information updates. For example, overload methods for adding new employees with varying sets of parameters such as name, ID, salary, and department.
+
 #include<iostream>
 using namespace std;
 
@@ -6,5 +8,7 @@ private:
     string name;
     int eid;
     string department;
+public: 
+    Employee(string n , int e, string d): name(n) , eid(e) , department(d){}
     
 };
