@@ -1,3 +1,4 @@
+//2. Implement a class called "Rectangle" with attributes length and width. Write methods to input dimensions, calculate area, and display the rectangle's details.
 #include<iostream>
 using namespace std;
 

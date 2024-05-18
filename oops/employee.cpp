@@ -1,3 +1,4 @@
+//1. Create a class named "Employee" with data members for employee ID, name, and salary. Include a method to input employee details and another method to display those details.
 #include<iostream>
 using namespace std;
 
