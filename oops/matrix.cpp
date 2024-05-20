@@ -1,13 +1,16 @@
+//8. Matrix Operations:
+//   Write a class to perform matrix operations such as addition, subtraction, multiplication, and transpose for matrices of integers or floating-point numbers.
+
 #include<iostream>
 using namespace std;
 
 class Matrix{
+private:
     int a[2][2] = {{1,2},{4,5}};
     int b[2][2] = {{3,6},{7,8}};
     int c[2][2] = {0};
     int d[2][2];
-
-    public:
+public:
     void display(){
         int i,j;
         cout << "The array1:- " << endl;
@@ -41,7 +44,7 @@ class Matrix{
         cout << endl << "The substraction of two matrix is:- " << endl ;
        for(i=0;i<2;i++){
             for(j=0;j<2;j++){
-                c[i][j] = a[i][j] - b[i][j];
+                c[i][j] = b[i][j] - a[i][j];
                 cout << c[i][j] << " ";
             }
             cout << endl;

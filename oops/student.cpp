@@ -1,3 +1,6 @@
+//1. Student Management System:
+//   Design a class to represent a student with attributes like name, roll number, and marks in different subjects. Implement methods to calculate the average marks, display student details, and update marks.
+
 #include<iostream>
 using namespace std;
 

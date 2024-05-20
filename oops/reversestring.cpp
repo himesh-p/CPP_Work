@@ -1,3 +1,6 @@
+//4. String Manipulation:
+//   Write a class with methods to reverse a string, check if a string is a palindrome, and count the occurrence of a specific character in a string.
+
 #include<iostream>
 using namespace std;
 

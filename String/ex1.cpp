@@ -7,15 +7,15 @@ int main() {
     string myStr = "Hello, World";
 
     //length -> returns the length of the string
-    // cout << myStr.length();
+   //  cout << myStr.length();
 
     //substr() -> used to extract a part of a string
-    // string mySubStr = myStr.substr(7, 5);
-    // cout << mySubStr << endl; 
+   //  string mySubStr = myStr.substr(7, 5);
+   //  cout << mySubStr << endl; 
 
     //find() -> returns index of found substring (returns -1 if not found)
-    // int position = myStr.find("l", 5);
-    // cout << "'world' found at position: " << position << endl;
+    int position = myStr.find("l", 5);
+    cout << "'world' found at position: " << position << endl;
     // if(position != string::npos) {
     //     cout << "'World' found at position: " << position << endl;
     // } else {

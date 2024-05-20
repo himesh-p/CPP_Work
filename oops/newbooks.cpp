@@ -1,3 +1,6 @@
+//2. Library Management System:
+//   Create a class for books with attributes such as title, author, and availability. Implement methods to check out and return books, and to display the list of available books.
+
 #include<iostream>
 #include<string>
 using namespace std;

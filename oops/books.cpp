@@ -1,3 +1,4 @@
+//4. Design a class called "Book" with attributes for book title, author, and price. Write functions to input book details, update price, and display book information.
 #include<iostream>
 using namespace std;
 

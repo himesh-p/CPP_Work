@@ -1,3 +1,4 @@
+//3. Develop a class named "BankAccount" with properties for account number, account holder's name, and balance. Include methods to deposit, withdraw, and display account details.
 #include<iostream>
 using namespace std;
 
