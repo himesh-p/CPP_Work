@@ -1,3 +1,5 @@
+//5. Create a class representing a student with member variables for name, roll number, and age. Write a constructor that accepts these details as parameters during object creation.
+
 #include<iostream>
 using namespace std;
 

@@ -1,4 +1,4 @@
-// 2. Implement a class for a geometric shape with member variables representing its dimensions. Write a /////parameterized constructor that initializes these dimensions when an object is created.
+//2. Implement a class for a geometric shape with member variables representing its dimensions. Write a parameterized constructor that initializes these dimensions when an object is created.
 
 #include<iostream>
 using namespace std;

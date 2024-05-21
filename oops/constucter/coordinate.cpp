@@ -1,3 +1,5 @@
+//6. Design a class to represent a point in a 2D coordinate system. Write a constructor that initializes the x and y coordinates to specific values.
+
 #include<iostream>
 using namespace std;
 
@@ -29,7 +31,7 @@ class Coordinate{
         }
         else{
             cout << "The coordinate is in origin." << endl;
-        }
+        }    
     }
 };
 

@@ -1,3 +1,5 @@
+//9. Design a class representing a calendar event with member variables for event name, date, and time. Write a constructor that takes these details as parameters.
+
 #include<iostream>
 using namespace std;
 

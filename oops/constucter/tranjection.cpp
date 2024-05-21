@@ -1,3 +1,5 @@
+//7. Implement a class for a bank transaction with member variables for transaction ID, amount, and transaction type. Write a constructor that initializes these variables.
+
 #include<iostream>
 using namespace std;
 

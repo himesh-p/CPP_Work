@@ -1,3 +1,5 @@
+//10. Create a class to represent a computer with member variables for brand, model, and price. Write a constructor that initializes these variables when an object of the class is instantiated.
+
 #include<iostream>
 using namespace std;
 

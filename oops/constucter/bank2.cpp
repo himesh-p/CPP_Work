@@ -1,3 +1,5 @@
+//3. Design a class to model a bank account with member variables for account number, balance, and account holder name. Write a constructor that takes initial values for these variables.
+
 #include<iostream>
 using namespace std;
 

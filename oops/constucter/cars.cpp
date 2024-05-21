@@ -1,3 +1,5 @@
+//1. Create a class representing a car with member variables for make, model, and year. Write a default constructor that initializes these variables to default values.
+
 #include<iostream>
 using namespace std;
 
@@ -31,6 +33,7 @@ public:
 
 
 int main(){
+    
     Car c;
     c.scan();
     c.display();

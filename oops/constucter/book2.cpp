@@ -1,3 +1,5 @@
+//4. Develop a class for a book with member variables for title, author, and publication year. Write a constructor that initializes these variables when an object of the class is instantiated.
+
 #include<iostream>
 using namespace std;
 
