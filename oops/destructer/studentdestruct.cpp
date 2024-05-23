@@ -1,3 +1,5 @@
+//2. Design a class to manage student records. Implement a destructor that displays a message when a student record object is destroyed.
+
 #include<iostream>
 #include<string>
 using namespace std;

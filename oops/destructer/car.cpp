@@ -1,3 +1,5 @@
+//1. Create a class representing a car. Implement a destructor that prints a message indicating the destruction of a car object.
+
 #include<iostream>
 #include<string>
 using namespace std;
@@ -27,8 +29,15 @@ class Car{
 };
 
 int main(){
-    Car obj("swift" , 20000 , 2012);
-    cout << "The Cars details before distruction:- " << endl;
+    Car obj("Swift" , 20000 , 2022);
+
     obj.display();
+    // for show details car to destroy really or not..............
+    // Car *obj1 = new Car("swift" , 20000 , 2012);
+    
+    // delete obj1;
+
+    // cout << "The Cars details before distruction:- " << endl;
+    // obj1->display();
     return 0;
 }

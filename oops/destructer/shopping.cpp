@@ -1,3 +1,5 @@
+//4. Build a class representing a shopping cart. Include a destructor that displays a message when a shopping cart object is destroyed.
+
 #include<iostream>
 #include<string>
 using namespace std;

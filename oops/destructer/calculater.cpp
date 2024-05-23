@@ -1,3 +1,5 @@
+//3. Develop a simple calculator class. Add a destructor that prints a farewell message when a calculator object is destroyed.
+
 #include<iostream>
 #include<string>
 using namespace std;

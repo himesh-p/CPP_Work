@@ -1,3 +1,5 @@
+//5. Design a class representing a computer. Implement a destructor that prints a message when a computer object is destroyed.
+
 #include<iostream>
 #include<string>
 using namespace std;
