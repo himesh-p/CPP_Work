@@ -1,3 +1,5 @@
+//10. Create a class to model a student enrollment system with dynamic storage for course registrations. Implement a copy constructor to support duplicating student enrollment records for academic audits and analysis.
+
 #include<iostream>
 using namespace std;
 

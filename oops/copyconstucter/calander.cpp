@@ -1,53 +1,48 @@
+//6. Create a class to model a calendar event with attributes like title, date, and attendees. Implement a copy constructor to enable duplicating calendar events for scheduling conflicts resolution.
+
 #include<iostream>
 using namespace std;
 
-class CalenderEvent {
-    private:
-    string title;
+class CalanderEvent{
+private:
+    string name;
     string date;
-    string attendees[10];
+    string attedence[10];
     int size;
-
-    public:
-    CalenderEvent(string t, string d, string a[], int s) {
-        title = t;
-        date = d;
-        size = s;
-        for (int i = 0; i < size; i++) {
-            attendees[i] = a[i];
-        }
+public:
+    CalanderEvent(string n, string d, string a[] , int s) : name(n) , date(d) , size(s){
+        for (int  i = 0; i < size; i++){
+            attedence[i] = a[i];
+        }        
     }
 
-    CalenderEvent(CalenderEvent& e) {
-        title = e.title;
-        date = e.date;
-        size = e.size;
-        for (int i = 0; i < size; i++) {
-            attendees[i] = e.attendees[i];
-        }
+    CalanderEvent(CalanderEvent &obj){
+        name = obj.name;
+        date = obj.date;
+        size = obj.size;
+        for (int  i = 0; i < size; i++){
+            attedence[i] = obj.attedence[i];
+        }   
     }
 
-    void display() {
-        cout << "\nTitle: " << title << endl;
-        cout << "Date: " << date << endl;
-        cout << "Guests: ";
-        for (int i = 0; i < size; i++) {
-            cout << attendees[i] << ", ";
+
+    void display(){
+        cout << "The name of this Event is :- " << name << endl; 
+        cout << "The Date of this Event is :- " << date << endl;
+        cout << "The name of person who attend this event :- " << endl ;
+        for (int  i = 0; i < size; i++){
+            cout << " - " << attedence[i] << endl;
         }
-        cout << "\b\b " << endl;
     }
 };
 
-int main() {
-    string guests[] = {"Himesh", "Meet", "Dhruv", "Jeel"};
+int main(){
+    string guests[] = {"Himesh" , "Meet" , "Dhurv" , "Jeel" , "Shrey sir"};
     int size = sizeof(guests)/sizeof(guests[0]);
-    CalenderEvent event("newyear", "31stdec", guests, size);
+    CalanderEvent event1("New Year Party" , "31st December" , guests , size);
 
-
-    CalenderEvent event2(event);
-
-    event.display();
-    event2.display();
-
+    // CalanderEvent event2(event1);
+    event1.display();
+    // event2.display();
     return 0;
 }

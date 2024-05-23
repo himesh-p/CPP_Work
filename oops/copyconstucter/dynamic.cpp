@@ -3,76 +3,81 @@
 #include<iostream>
 using namespace std;
 
-class Equipment {
+class Equipment{
+private:
     string name;
     double cost;
 public:
-    Equipment(string n, double c) : name(n), cost(c) {}
+    Equipment(string n , double c) : name(n) , cost(c) {}
 
-    void display() {
-        cout << "Equipment: " << name << ", Cost: " << cost << endl;
+    void display(){
+        cout << "Name :- " << name << " , Cost :- " << cost << endl;
     }
 };
 
-class ExperimentSetup {
+class ExperimentSetUp{
+private:
     Equipment** equipments;
-    int numEquipments;
-
+    int numEquipment;
 public:
-    ExperimentSetup(int num) : numEquipments(num) {
-        equipments = new Equipment*[numEquipments];
+    ExperimentSetUp(int num) : numEquipment(num){
+         equipments = new Equipment*[numEquipment]; 
     }
 
-    ExperimentSetup(ExperimentSetup& other) : numEquipments(other.numEquipments) {
-        equipments = new Equipment*[numEquipments];
-        for (int i = 0; i < numEquipments; i++) {
-            equipments[i] = new Equipment(*(other.equipments[i]));
+    ExperimentSetUp(ExperimentSetUp& obj){
+        equipments = new Equipment*[numEquipment];
+        numEquipment = obj.numEquipment;
+        for (int  i = 0; i < numEquipment; i++)
+        {
+            equipments[i] = new Equipment(*(obj.equipments[i]));
         }
     }
 
-    ~ExperimentSetup() {
-        for (int i = 0; i < numEquipments; i++) {
+    ~ExperimentSetUp(){
+        for (int i = 0; i < numEquipment; i++)
+        {
             delete equipments[i];
         }
-        delete[] equipments;
+        delete[] equipments;   
     }
 
-    void addEquipment(int index, Equipment* equipment) {
-        if(index >= 0 && index < numEquipments) {
+    void addEquipment(int index , Equipment* equipment){
+        if(index >= 0 && index < numEquipment ){
             equipments[index] = equipment;
         }
     }
 
-    void display() {
-        cout << "Experiment Setup: " << endl;
-        for (int i = 0; i < numEquipments; i++) {
-            cout << "Euipment at index " << i << endl;
-            if(equipments[i] != nullptr) {
-                equipments[i]->display();
-            } else {
+    void displayEquipmemt(){
+        cout << "Equipments Details :- " << endl;
+        for (int i = 0; i < numEquipment; i++){
+            cout << "Equipment index :- " << i << endl;
+            if(equipments[i] != nullptr){
+                equipments[i]->display(); 
+            }    
+            else{
                 cout << "Empty" << endl;
             }
         }
     }
 };
 
+int main(){
+    Equipment e1("MicroPhone" , 50000);
+    Equipment e2("VidioPhone" , 200000);
 
-int main() {
-    Equipment e1("Microscope", 50000);
-    Equipment e2("Spectrometer", 100000);
+    ExperimentSetUp setUp(2);
 
-    ExperimentSetup setup(2);
+    setUp.addEquipment(0,&e1);
+    setUp.addEquipment(1,&e2);
 
-    setup.addEquipment(0, &e1);
-    setup.addEquipment(1, &e2);
+    cout << "Original Equipment :- " << endl;
+    
+    setUp.displayEquipmemt();
 
-    cout << "Original Experiment Setup:" << endl;
-    setup.display();
+    ExperimentSetUp copysetUp = setUp;  
+    cout << "Duplicate Equipment :- " << endl;
 
-    ExperimentSetup copySetup = setup;
-
-    cout << "\nCopied Experiment Setup: " << endl;
-    copySetup.display();
+    copysetUp.displayEquipmemt();
 
     return 0;
 }

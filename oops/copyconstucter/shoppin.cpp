@@ -1,35 +1,31 @@
+//2. Design a class to model a shopping cart for an online store with dynamic storage for product items. Implement a copy constructor to support duplicating the shopping cart contents for different user sessions.
+
 #include<iostream>
 using namespace std;
 
-class Shopping {
+class ShoppinCart{
 private:
     string name;
-    float price;
+    double price;
 public:
-   Shopping(string n, float p) {
-        name = n;
-        price = p;
+    ShoppinCart(string n , double p) : name(n) , price(p){}
+
+    ShoppinCart(ShoppinCart& obj){
+        name = obj.name;
+        price = obj.price;
     }
 
-   Shopping(Shopping& s) {
-        name = s.name;
-        price = s.price;
-    }
-
-    void display() {
-        cout <<endl << "The name of item:- " << name << endl;
-        cout << "The price of item:- " << price << endl;
-    }
+    void display(){
+        cout << "The name of the product :- " << name << endl;;
+        cout << "The price of the product :- " << price << endl;
+     }
 };
 
-int main() {
-   
-   Shopping n("Milk" , 32);
+int main(){
+    ShoppinCart cart1("Milk" , 34);
+    ShoppinCart cart2(cart1);
 
-   Shopping m(n);
-
-    n.display();
-    m.display();
-
+    cart1.display();
+    cart2.display();
     return 0;
 }

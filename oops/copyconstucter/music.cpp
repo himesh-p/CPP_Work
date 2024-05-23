@@ -1,40 +1,39 @@
+//1. Create a class representing a musical playlist with a dynamic array of song objects. Implement a copy constructor to ensure a deep copy of the playlist, including all song details.
+
 #include<iostream>
 using namespace std;
 
-class Music {
-    private:
+class Muzic{
+private:
     string name;
     string artist;
     int year;
+public:
+    Muzic(string n, string a, int y) : name(n) , artist(a) , year(y){}
 
-    public:
-   Music(string n, string a, int y) {
-        name = n;
-        artist = a;
-        year = y;
+    Muzic(Muzic &obj){
+        name = obj.name;
+        artist = obj.artist;
+        year = obj.year;
     }
 
-   Music(Music& i) {
-        name = i.name;
-        artist = i.artist;
-        year = i.year;
-    }
-
-    void display() {
-        cout << "\nname of song:-  " << name << endl;
-        cout << "name of artist:- : " << artist << endl;
-        cout << "published year of the song:-  " << year << endl;
+    void display(){
+        cout << "The name of this song:- " << name << endl;
+        cout << "The Artist of this song:- " << artist << endl;
+        cout << "The year of this song:- " << year << endl;
     }
 };
 
-int main() {
-   
-   Music n("Mere sapano ki rani", "Kishor Kumar", 1987);
+int main(){
 
-   Music m(n);
+    Muzic playlist1("Character Dilla Hai!!!" , "Pritam" , 2014);
+    Muzic playlist2(playlist1);
+    // display orignal playlist :- 
 
-    n.display();
-    m.display();
+    playlist1.display();
 
+    // display duplicate playlist :- 
+    
+    playlist2.display();
     return 0;
 }

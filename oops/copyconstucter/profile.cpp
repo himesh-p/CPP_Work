@@ -1,37 +1,34 @@
+//5. Design a class representing a social media post with dynamic storage for comments and likes. Implement a copy constructor to facilitate sharing posts across multiple user profiles.
+
 #include<iostream>
 using namespace std;
 
 class Profile{
 private:
-    string p_name;
-    string likes;
-    string comments;
+    string name;
+    double likes;
+    double comments;
 public:
-    Profile(string p, string l , string c){
-        p_name = p;
-        likes = l;
-        comments = c;
-    }
+    Profile(string n , double l , double c) : name(n) , likes(l) , comments(c){}
 
-    Profile(Profile& obj){
-        p_name = obj.p_name;
+    Profile(Profile &obj){
+        name = obj.name;
         likes = obj.likes;
         comments = obj.comments;
     }
+
     void display(){
-        cout << "The name of Profile:- " << p_name <<  endl;
-        cout << "The likes in your post:- " << likes << endl;
-        cout << "The comments in your post:- " << comments << endl;
-    }
+        cout << "The name of this profile is :- " << name << endl;
+        cout << "The likes of this post is :- " << likes  << "k"<< endl;
+        cout << "The comments of this post :- "  << comments << endl;
+     }
 };
 
 int main(){
 
-    Profile o1("Himesh_patel_50" , "34.5k" , "12.3k");
-
-    Profile o2(o1);
-    o1.display();
-    cout << endl << endl;
-    o2.display();
+    Profile Id1("Himesh_Patel_50" , 30.6 , 105);
+    Profile Id2(Id1); 
+     Id1.display();
+     Id2.display();
     return 0;
 }
