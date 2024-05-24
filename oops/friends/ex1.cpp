@@ -12,6 +12,7 @@ public:
     friend void printData(const MyClass& obj);  //Made Friend
 };
 
+
 void printData(const MyClass& obj) {    //Use Friendship
     cout << "Data in MyClass: " << obj.data << endl;
 }

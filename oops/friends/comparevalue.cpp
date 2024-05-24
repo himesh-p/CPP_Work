@@ -1,3 +1,5 @@
+//2. Compare the private data members of two different classes: Define two classes with private data members and a friend function to compare those data members and determine which class has a greater value.
+
 #include<iostream>
 using namespace std;
 
@@ -32,6 +34,14 @@ int main(){
     Value2 v2(6); 
     int x = first(v1);
     int y = second(v2);
+    cout << "The value before swaping:- " << endl;
+    cout << "First :- " << x << " and Second :- " << y << endl;
+    int temp;
+    temp = x;
+    x = y;
+    y = temp;
+    cout << "The value after swaping:- " << endl;
+    cout << "First :- " << x << " and Second :- " << y << endl;
     if(x == y){
         cout << endl << "Both value are same" << endl;
     }else if(x > y){

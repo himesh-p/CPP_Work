@@ -1,11 +1,13 @@
+//4. Calculate the average of private data members of a class: Create a class with private data members and a friend function to calculate the average of those data members.
+
 #include<iostream>
 using namespace std;
 
 class SumOfNum{
 private:    
-    int m1,m2,m3,m4;
+    double m1,m2,m3,m4;
 public:
-    SumOfNum(int a , int b , int c , int d): m1(a) , m2(b) , m3(c) ,m4(d){}
+    SumOfNum(double a , double b , double c , double d): m1(a) , m2(b) , m3(c) ,m4(d){}
     
     friend void numbersum(const SumOfNum& obj);
 };

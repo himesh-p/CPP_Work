@@ -1,3 +1,5 @@
+//7. Implement a simple calculator using friend functions: Define a class representing a calculator with private data members for operands and a friend function for performing arithmetic operations.
+
 #include<iostream>
 using namespace std;
 

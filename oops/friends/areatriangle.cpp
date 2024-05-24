@@ -1,3 +1,5 @@
+// 9. Calculate the area of a triangle using friend function: Define a class representing a triangle with private data members for its sides and a friend function to calculate its area.
+
 #include<iostream>
 using namespace std;
 

@@ -1,3 +1,5 @@
+//1. Calculate the sum of two private data members of different classes: Create two classes with private data members and a friend function to calculate the sum of those data members.
+
 #include<iostream>
 using namespace std;
 

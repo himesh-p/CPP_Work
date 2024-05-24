@@ -1,3 +1,5 @@
+//5. Perform matrix addition using friend function: Define a class for matrices with private data members and a friend function to add two matrices.
+
 #include<iostream>
 using namespace std;
 
