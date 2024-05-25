@@ -1,4 +1,5 @@
-//Create a system to classify vehicles into different categories based on their type (e.g., car, motorcycle) and their engine type (e.g., electric, gas). Use hybrid inheritance to model this system effectively.
+//1. Vehicle Classification:
+//    Create a system to classify vehicles into different categories based on their type (e.g., car, motorcycle) and their engine type (e.g., electric, gas). Use hybrid inheritance to model this system effectively.
 
 #include<iostream>
 using namespace std;

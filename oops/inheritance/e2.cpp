@@ -7,7 +7,6 @@ protected:
     string type;
 public:
     Geometry(string t) : type(t){}
-
     void displayType(){
         cout << "The type of the geometry shape is:- "  << type  << endl; 
     }

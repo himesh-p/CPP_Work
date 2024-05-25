@@ -1,4 +1,4 @@
-//3. Geometry Inheritance: Construct a program to represent various geometric shapes using inheritance. Define a base class 'Shape' and derived classes such as 'Circle', 'Square', and 'Triangle'. Implement methods to calculate area and perimeter for each shape, inheriting appropriate properties and behaviors from the base class.
+//3.Geometry Inheritance: Construct a program to represent various geometric shapes using inheritance. Define a base class 'Shape' and derived classes such as 'Circle', 'Square', and 'Triangle'. Implement methods to calculate area and perimeter for each shape, inheriting appropriate properties and behaviors from the base class.
 
 #include<iostream>
 using namespace std;

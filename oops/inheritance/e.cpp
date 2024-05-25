@@ -5,7 +5,6 @@ class Parants{
 private:
     string car;
 public:
-    Parants(){}
     Parants(string c): car(c){}
 
     void display(){

@@ -12,6 +12,7 @@ public:
     void display() {
         cout << "Brand: " << brand << endl;
     }
+
 };
 
 class Car : public Vehicle {
