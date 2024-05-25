@@ -1,3 +1,5 @@
+//4. "Develop a 'Student' class to represent students' academic records. Use a static member function 'calculateAverageScore(Student* students, int count)' that takes an array of 'Student' objects and calculates the average score of all the students."
+
 #include<iostream>
 using namespace std;
 

@@ -1,3 +1,5 @@
+//2. "Implement a 'MathUtility' class with a static member function 'factorial(int n)' that calculates and returns the factorial of a given integer 'n'. The function should be accessible without creating an instance of the class."
+
 #include<iostream>
 using namespace std;
 
