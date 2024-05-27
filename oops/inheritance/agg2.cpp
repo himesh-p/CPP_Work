@@ -96,6 +96,7 @@ public:
     void add_branch(Branch* obj) {
         if(num_brances == capacity) {
             cout << "Warning: Agency at capacity, cars not added." << endl;
+            return;
         }
         branches[num_brances++] = obj;
     }
@@ -126,9 +127,9 @@ int main(){
     o3.addCars(new Car("Creta" , 2000));
 
     o2.displayInfo();
-    cout << "The average revanue amount is:- " << o2.calculate_branch_revnue("Suzuki") << endl;
+    cout << "The average revanue amount is:- " << o1.calculate_branch_revnue("Suzuki") << endl;
     
     o3.displayInfo();
-    cout << "The average revanue amount is:- " << o1.calculate_branch_revnue("Haundai") << endl;
+    cout << "The average revanue amount is:- " << o1.calculate_branch_revnue("Huandai") << endl;
     return 0;
 }

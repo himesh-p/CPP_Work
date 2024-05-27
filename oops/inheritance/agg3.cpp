@@ -36,6 +36,11 @@ public:
         delete books;
     }
 
+
+    string getType(){
+        return type;
+    }
+
     void add_books(Book* book){
         if(num_book == capacity){
             cout << "Can not added more books, capacity is full." << endl;
@@ -44,14 +49,16 @@ public:
         books[num_book++] = book;
     }
 
-    void searchBook(string &search){
+    void searchBook(string search){
         for (int i = 0; i < num_book; i++)
         {
             if(books[i]->getTitle() == search){
                 cout << search << " -> This book is found." << endl; 
+                return;
             }
             else{
                 cout << search << " -> This books is not found." << endl;
+                return;
             }
         }   
     }
@@ -59,7 +66,7 @@ public:
     void displayInfo(){
         cout << "Books are in their type:- " << type << endl; 
         for (int i = 0; i < num_book; i++){
-            cout << "Books Title:- " << books[i]->getTitle() << "and author name:- " << books[i]->getAuthor()  << endl;
+            cout << "Books Title:- " << books[i]->getTitle() << " , and author name:- " << books[i]->getAuthor()  << endl;
         }     
     }
 };
@@ -92,12 +99,39 @@ public:
     void findBookinSection(string& sectionName){
         for (int i = 0; i < num_section; i++)
         {
-            if(sections[i]->searchBook() ){}
+            if(sections[i]->getType() == sectionName){
+                cout << "-> This section is found in this library." << endl;
+            }else{
+                cout << "This section is not found in this library." << endl;
+            }
         }
-        
     }
 };
 int main(){
 
+    Library obj1("Shanti lal mehata's Library");
+
+    Section obj2("History");
+    Section obj3("King-Queen");
+
+    obj1.add_sections(&obj2);
+    obj1.add_sections(&obj3);
+
+    obj2.add_books(new Book("himesh" , "Bhugol"));
+    obj2.add_books(new Book("meet" , "Itihas"));
+    obj3.add_books(new Book("Dhruv" , "Raja Bhoj"));
+    obj3.add_books(new Book("Zafar sir" , "Sikandar"));
+
+    cout << "The all details of the book in first section :- " << endl;
+    obj2.displayInfo();
+
+    cout << "The all details of the book in first section :- " << endl;
+    obj2.displayInfo();
+
+    cout << "Let's we find the any book first section using title :- " << endl;
+    obj2.searchBook("Bhugol");
+
+    cout << "Let's we find the any book second section using title :- " << endl;
+    obj3.searchBook("Sikandar");
     return 0;
 }
