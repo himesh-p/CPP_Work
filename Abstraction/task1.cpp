@@ -6,77 +6,100 @@
  #include<iostream>
  using namespace std;
 
-class Cuisines{
-protected:
+class Cuisine{
+private:
     string name;
     double price;
 public:
-    Cuisines(string n, double p): name(n) , price(p){}
-    
-    virtual void addDishes(Cuisines*) = 0;
-    virtual void calculateTotal() = 0;
-    virtual void display() = 0;
+    Cuisine(string n , double p) : name(n) , price(p){}
+
+    virtual void display() = 0; 
+    virtual string getName(){
+        return name;
+    }
     virtual double getPrice(){
         return price;
     }
 };
 
-class ItalianCuisine : public Cuisines{
+class ItalianCuisine : public Cuisine{
 public:
-    ItalianCuisine(string n , double p): Cuisines(name,price){}
+    ItalianCuisine(string n , double p) : Cuisine(n,p){}
 
-    void display()override{
-        cout << "Dish:- " << name << "And Price:- " << price << endl;
+    void display() override{
+        cout << "The name of this dish :- " << Cuisine::getName() << " , and price is :- " << Cuisine::getPrice() << endl;  
     }
 };
 
-class ChineseCuisine : public Cuisines{
+class ChineseCuisine : public Cuisine{
 public:
-    ChineseCuisine(string n , double p): Cuisines(name,price){}
+    ChineseCuisine(string n , double p) : Cuisine(n,p){}
 
-    void display()override{
-        cout << "Dish:- " << name << "And Price:- " << price << endl;
+    void display() override{
+        cout << "The name of this dish :- " << Cuisine::getName() << " , and price is :- " << Cuisine::getPrice() << endl;  
     }
 };
 
-class Management{
+
+class Managment{
 private:
-    Cuisines **Items;
     int capacity;
-    int size;
+    int num_dish;
+    Cuisine **cuisenes;
 public:
-    Management(int cap): size(0) , capacity(cap){
-        Items = new Cuisines*[capacity];
-    }
-    ~Management(){
-        for (int i = 0; i < size; i++)
-        {
-            delete Items[i];
-        }
-        delete[] Items;
+    Managment(int cap) : capacity(cap) , num_dish(0){
+        cuisenes = new Cuisine*[capacity];
     }
 
-    void addDishes(Cuisines *obj){
-        if(size < capacity){
-            Items[size++] = obj; 
+    ~Managment(){
+        for (int  i = 0; i < num_dish; i++)
+        {
+            delete cuisenes[i];
+        }
+        delete[]  cuisenes;     
+    }
+
+    void add_dishes(Cuisine *cuisine){
+        if(num_dish < capacity){
+            cuisenes[num_dish++] = cuisine;
         }
         else{
-            cout << "Capicity is full" << endl;
+            cout << "Cannot added more dishes because capacity is full." << endl;
         }
     }
 
-    void calculateTotal(){
-        double Total = 0.0;
-        for (int i = 0; i < size; i++)
+    double calculateTotal(){
+        double total = 0.0;
+        for (int i = 0; i < num_dish; i++)
         {
-            Total += Items[i]->getPrice();
+            total += cuisenes[i]->getPrice();
         }
+        return total;
+    }
+
+    void display(){
+        cout << "Your packege :- " << endl;
+        for (int i = 0; i < num_dish; i++)
+        {
+            cuisenes[i]->display();
+        }
+        cout << "The total payment is :- " << calculateTotal() << endl;
     }
 };
 
 int main(){
 
-    Management obj1(3);
-    obj1.addDishes(new ItalianCuisine("asd" , 500));
+    Managment obj(5);
+    obj.add_dishes(new ChineseCuisine("Chinise" , 100));
+    obj.add_dishes(new ChineseCuisine("Manchurian" , 130));
+    obj.add_dishes(new ChineseCuisine("manchow shoup" , 60));
+    obj.add_dishes(new ItalianCuisine("Italian Pizza" , 430));
+    obj.add_dishes(new ItalianCuisine("Italian Pasta" , 280));
+    obj.add_dishes(new ItalianCuisine("Italian Pasta" , 280));
+    // obj.add_dishes(new ItalianCuisine("Italian Pasta" , 280));
+
+
+    obj.display();
+
     return 0;
 }
