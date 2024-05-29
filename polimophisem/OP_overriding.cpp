@@ -21,6 +21,7 @@ public:
     void displayData() {    //Overridden method
         cout << "Private Data from Child is " << privateData << endl;
     }
+    
 };
 
 int main() {
@@ -45,5 +46,4 @@ Override the 'displayInfo()' method in each derived class:
 2. In the 'DigitalProduct' class, override 'displayInfo()' to include information about download links and file sizes.
 
 Instantiate instances of both 'PhysicalProduct' and 'DigitalProduct', highlighting how method overriding allows you to display unique product details while using a shared interface.
-
 */

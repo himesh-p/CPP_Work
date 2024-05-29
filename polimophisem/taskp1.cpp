@@ -19,7 +19,6 @@ public:
         cout << "The area of Rectangle:- ";
         return a*b;
     }
-    
 };
 
 int main() {

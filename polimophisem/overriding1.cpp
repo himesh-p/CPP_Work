@@ -5,9 +5,9 @@ class Product{
 private:
     string name;
     float price;
-    float discription;
+    string discription;
 public: 
-    Product(string n, float p, float d){
+    Product(string n, float p, string d){
         name = n;
         price = p;
         discription = d;
@@ -25,7 +25,7 @@ private:
     int shoppingcost;
     int deliverytime;
 public:
-    // PhysicalProdeuct(string n , float d , string j){}
+    PhysicalProdeuct(int w , int s ,int d,string n, float p, string d1) : weigth(w) , shoppingcost(s) , deliverytime(d) , Product(n,p,d1){}
     void displayInfo(){
         cout << "The Weigth of this Physical product:- " << weigth << endl;
         cout << "The Shopping Cost of this product is:- " << shoppingcost << endl;
@@ -45,8 +45,7 @@ public:
 };
 int main(){
 
-    // Product p("Food" , 5 , "testy");
-
+    // PhysicalProdeuct obj1(23 , 1000, 10 , );
 
     return 0;
 }

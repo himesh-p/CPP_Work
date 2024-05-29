@@ -11,4 +11,19 @@ private:
 public: 
     Employee(string n , int e, string d): name(n) , eid(e) , department(d){}
     
+    void info(){
+        cout << "The type of employees " << endl; 
+    }
+};
+
+class Manager : public Employee{
+private:
+    string que;
+public:
+    Manager(string q,string n , int e, string d) : que(q) , Employee(n,e,d){}
+
+
+    void info(){
+        
+    }
 };

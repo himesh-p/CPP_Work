@@ -30,10 +30,10 @@ int main() {
 
     StringArithmetic s1("Hello"), s2(" World!");
 
-    cout << "\nAddition: ";
+    cout << "\nAddition :- ";
     (s1+s2).display();
 
-    cout << endl << "Multiplication: ";
+    cout << endl << "Multiplication :- ";
     (s1 * 3).display();
     return 0;
 }
